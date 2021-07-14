@@ -65,12 +65,74 @@ body{
     padding: 15px;
     padding-bottom: 45px;
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
 }
+.photo-frame:hover .photo{
+    transform: scale(1.1);
+    transition: transform 1s ease-in-out;
+}
+
 .photo img{
     width: 300px;
-    height: 256px;
+    height: 256px; 
+    cursor: pointer;
 }
 .photo-title{
     font-size: 28px;
     font-weight: 700;
+}
+
+/* bonus round start  */
+
+.more-news{
+        margin-left: 70px;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+    margin-top: 50px;
+}
+.news-frame{
+    width: 300px;
+    height: 465px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15) ;
+    padding: 10px;
+    position: relative;
+}
+.news-frame:hover .visit{
+    display: block;
+    background-color: rgba(245, 245, 245, 0.335);
+    cursor: pointer;
+}
+
+.photo-video img{
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+}
+.visit{
+    display: none;
+    position: absolute;
+    top: 10px;
+    right:60px;
+    font-size: 50px;
+    font-weight: 900;
+}
+.icons-container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.left-icon, .last-icon{
+    color: #888;
+}
+.right-icon a, .fa-file-alt{
+    text-decoration: none;
+    color: purple ;
+    font-weight: bold;
+}
+.last-icon a{
+    color: #888;
 }
